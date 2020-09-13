@@ -6,4 +6,4 @@ A simple click-and-respond interaction in order to provide answers, at scale, to
 
 So far this will cover English and Bangladeshi languages.
 
-The website is https://shahajjo.me
+The website is https://www.shahajjo.me/
