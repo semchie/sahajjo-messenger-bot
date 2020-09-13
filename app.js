@@ -163,8 +163,6 @@ function handlePostback(sender_psid, received_postback) {
           "template_type": "generic",
           "elements": [{
             "title": "Choose a category",
-            //"subtitle": "Tap a button to answer.",
-            //"image_url": "https://sahajjo-test.herokuapp.com/images/profile_photo.jpg",
             "buttons": [
               {
                 "type": "postback",
