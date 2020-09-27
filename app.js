@@ -109,7 +109,7 @@ function handleMessage(sender_psid, received_message) {
     // Create the payload for a basic text message, which
     // will be added to the body of our request to the Send API
 
-    //Sets up button template
+    //Send the button template if the user types any text to get them back to the main menu
     response = {
         "attachment": {
         "type": "template",
@@ -117,22 +117,24 @@ function handleMessage(sender_psid, received_message) {
           "template_type": "generic",
           "elements": [{
             "title": "Choose a category",
-            //"subtitle": "Tap a button to answer.",
-            //"image_url": "https://sahajjo-test.herokuapp.com/images/profile_photo.jpg",
+            "subtitle": "Tap a button to answer.",
             "buttons": [
               {
+                //Remittance
                 "type": "postback",
-                "title": "Remittance",
+                "title": "রেমিট্যান্স",
                 "payload": "remittance",
               },
               {
+                //Salary
                 "type": "postback",
-                "title": "Salary",
+                "title": "বেতন",
                 "payload": "salary",
               },
               {
+                //Worker Rights
                 "type": "postback",
-                "title": "Worker rights",
+                "title": "শ্রমিকের অধিকার",
                 "payload": "worker_rights",
               }
             ],
@@ -153,7 +155,7 @@ function handlePostback(sender_psid, received_postback) {
   // Get the payload for the postback
   let payload = received_postback.payload;
 
-  // Set the response based on the postback payload
+  // If the user selects the "Get_Started" button show them this menu of buttons
   if (payload == 'GET_STARTED') {
 
     response = {
@@ -163,20 +165,24 @@ function handlePostback(sender_psid, received_postback) {
           "template_type": "generic",
           "elements": [{
             "title": "Choose a category",
+            "subtitle": "Tap a button to answer.",
             "buttons": [
               {
+                //Remittance
                 "type": "postback",
-                "title": "Remittance",
+                "title": "রেমিট্যান্স",
                 "payload": "remittance",
               },
               {
+                //Salary
                 "type": "postback",
-                "title": "Salary",
+                "title": "বেতন",
                 "payload": "salary",
               },
               {
+                //Worker Rights
                 "type": "postback",
-                "title": "Worker rights",
+                "title": "শ্রমিকের অধিকার",
                 "payload": "worker_rights",
               }
             ],
@@ -185,11 +191,16 @@ function handlePostback(sender_psid, received_postback) {
       }
     }
 
+    //If the user selects the remittance button, here is the remittance information
+
   } else if (payload === 'remittance') {
     
     response = { 
-      "text": "No remittance content yet!" 
+      "text": "No remittance content yet! Go to https://www.shahajjo.me/ for more information" 
     }
+
+    //If the user selects the salary button, here is the salary information
+
   } else if (payload === 'salary') {
     
     response = {
@@ -199,13 +210,11 @@ function handlePostback(sender_psid, received_postback) {
           "template_type": "generic",
           "elements": [{
             "title": "Choose a topic on salary issues",
-            //"subtitle": "Tap a button to answer.",
-            //"image_url": "https://sahajjo-test.herokuapp.com/images/profile_photo.jpg",
             "buttons": [
               {
                 "type": "postback",
-                "title": "Send Money Back Home",
-                "payload": "send_money_home",
+                "title": "প্রশ্ন ১৩ : ভাই আমি তিনমাস যাবত পাচ্ছি না এখন কিভাবে বেতন পেতে পারি?",
+                "payload": "not_received_salary",
               },
               {
                 "type": "postback",
@@ -249,11 +258,13 @@ function handlePostback(sender_psid, received_postback) {
         }
       }
     }
-  } else if (payload === 'send_money_home') {
+
+    //If select not_received_salary button
+  } else if (payload === 'not_received_salary') {
 
       response = {
 
-        "text": 'Learn More: https://www.shahajjo.me/post/4'
+        "text": 'উত্তর : আপনি নিচের হেল্ললাইনে যোগাযোগ করুন তারা আপনাকে হেল্প করবে। Call: 88312560 WhatsApp: https://wa.me/6588312560, Call: 90895538 WhatsApp: https://wa.me/6590895538, Call: 86477244 WhatsApp: https://wa.me/6586477244, Call: 98830947 WhatsApp: https://wa.me/6598830947'
 
       }
 
