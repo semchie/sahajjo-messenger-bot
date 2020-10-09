@@ -249,8 +249,88 @@ function handlePostback(sender_psid, received_postback) {
 
   } else if (payload === 'worker_mobility') {
     
-    response = { 
-      "text": "No remittance content yet! Go to https://www.shahajjo.me/ for more information" 
+    response = {
+        "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [
+          {
+            "title": "rejected passport transfer",
+            "subtitle": "rejected passport transfer",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "See More",
+                "payload": "rejected_passport_transfer",
+              },
+            ],
+          },
+          {
+            "title": "permit expired",
+            "subtitle": "permit expired",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "See More",
+                "payload": "passport_expired",
+              },
+            ],
+          },
+          {
+            "title": "travel to country",
+            "subtitle": "travel to country",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "See More",
+                "payload": "travel_to_country",
+              },
+            ],
+          },
+          {
+            "title": "holiday to country",
+            "subtitle": "holiday to country",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "See More",
+                "payload": "holiday_to_country",
+              },
+            ],
+          },
+          {
+            "title": "How to transfer",
+            "subtitle": "how to transfer",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "See More",
+                "payload": "how_to_transfer",
+              },
+            ],
+          },
+          {
+            "title": "Go to country now",
+            "subtitle": "Go to country now",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "See More",
+                "payload": "go_to_country_now",
+              },
+            ],
+          }
+          
+          ]
+        }
+      }
     }
 
     //If the user selects the salary button, here is the salary information
