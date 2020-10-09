@@ -120,10 +120,10 @@ function handleMessage(sender_psid, received_message) {
             "subtitle": "Tap a button to answer.",
             "buttons": [
               {
-                //Remittance
+                //Worker Mobility
                 "type": "postback",
-                "title": "রেমিট্যান্স",
-                "payload": "remittance",
+                "title": "কর্মী গতিশীলতা",
+                "payload": "worker_mobility",
               },
               {
                 //Salary
@@ -168,10 +168,10 @@ function handlePostback(sender_psid, received_postback) {
             "subtitle": "Tap a button to answer.",
             "buttons": [
               {
-                //Remittance
+                //Worker Mobility
                 "type": "postback",
-                "title": "রেমিট্যান্স",
-                "payload": "remittance",
+                "title": "কর্মী গতিশীলতা",
+                "payload": "worker_mobility",
               },
               {
                 //Salary
@@ -191,9 +191,9 @@ function handlePostback(sender_psid, received_postback) {
       }
     }
 
-    //If the user selects the remittance button, here is the remittance information
+    //If the user selects the Worker Mobility button, here is the worker mobility information
 
-  } else if (payload === 'remittance') {
+  } else if (payload === 'worker_mobility') {
     
     response = { 
       "text": "No remittance content yet! Go to https://www.shahajjo.me/ for more information" 
