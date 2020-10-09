@@ -335,6 +335,44 @@ function handlePostback(sender_psid, received_postback) {
 
     //If the user selects the salary button, here is the salary information
 
+  } else if (payload === 'worker_rights') {
+    
+    response = {
+        "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [
+          {
+            "title": "Need passport back",
+            "subtitle": "Need passport back",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "See More",
+                "payload": "need_passport_back",
+              },
+            ],
+          },
+          {
+            "title": "Passport coming?",
+            "subtitle": "Is my passport coming?",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "See More",
+                "payload": "passport_coming",
+              },
+            ],
+          }
+          ]
+        }
+      }
+    }
+    //If the user selects the salary button, here is the salary information
+
   } else if (payload === 'salary') {
     
     response = {
@@ -342,25 +380,75 @@ function handlePostback(sender_psid, received_postback) {
         "type": "template",
         "payload": {
           "template_type": "generic",
-          "elements": [{
-            "title": "Choose a topic on salary issues",
+          "elements": [
+          {
+            "title": "quarantine pay",
+            "subtitle": "quarantine pay",
             "buttons": [
               {
+                
                 "type": "postback",
-                "title": "আমি তিনমাস যাবত পাচ্ছি না এখন কিভাবে বেতন পেতে পারি?",
-                "payload": "not_received_salary",
-              },
-              {
-                "type": "postback",
-                "title": "TBD",
-                "payload": "TBD",
+                "title": "See More",
+                "payload": "quarantine_pay",
               },
             ],
-          }]
+          },
+          {
+            "title": "IP refund",
+            "subtitle": "IP refund",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "See More",
+                "payload": "ip_refund",
+              },
+            ],
+          },
+          {
+            "title": "no salary",
+            "subtitle": "no salary",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "See More",
+                "payload": "no_salary",
+              },
+            ],
+          }
+          ]
         }
       }
-    }
-    } else if (payload === 'worker_rights') {
+    } 
+
+  } else if (payload === 'living_conditions') {
+    
+    response = {
+        "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [
+          {
+            "title": "leave dormitory",
+            "subtitle": "leave dormitory",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "See More",
+                "payload": "leave_dormitory",
+              },
+            ],
+          }
+          
+          ]
+        }
+      }
+    } 
+
+  } else if (payload === 'worker_rights') {
 
       response = {
         "attachment": {
@@ -392,16 +480,7 @@ function handlePostback(sender_psid, received_postback) {
         }
       }
     }
-
     //If select not_received_salary button
-  } else if (payload === 'not_received_salary') {
-
-      response = {
-
-        "text": 'উত্তর : আপনি নিচের হেল্ললাইনে যোগাযোগ করুন তারা আপনাকে হেল্প করবে। Call: 88312560 WhatsApp: https://wa.me/6588312560, Call: 90895538 WhatsApp: https://wa.me/6590895538, Call: 86477244 WhatsApp: https://wa.me/6586477244, Call: 98830947 WhatsApp: https://wa.me/6598830947'
-
-      }
-
   } else if (payload === 'employment_rights') {
 
       response = {
@@ -466,6 +545,48 @@ function handlePostback(sender_psid, received_postback) {
       response = {
 
         "text": ' আপনার দেশে যাওয়ার ব্যাপারটা কোম্পানির উপর নির্ভর করছে। আপনি কোম্পানিকে জানান৷ কোম্পানি এমওএম এ আপনার দেশে যাওয়ার জন্য আবেদন করবে । এমওএম সবকিছু চেক করে আপনার কোম্পানিকে প্রয়োজনীয় পদক্ষেপ গ্রহণ করার জন্য জানাবে। তবেই আপনি দেশে যেতে পারবেন। আর সবচেয়ে গুরুত্বপূর্ণ কথা হলো, এমওএন এ আবেদন করা মানেই দ্রুত দেশে যেতে পারবেন  তা নয়।এখন অনেকেই দেশে যাবার জন্য আবেদন করেছে তাই আপনাকে অপেক্ষা করতে হবে। সিরিয়াল অনুযায়ী আপনার সময় হলেই আপনি দেশে যেতে পারবেন৷'
+
+      }
+  } else if (payload === 'need_passport_back') {
+
+      response = {
+
+        "text": 'সিঙ্গাপুরের নিয়ম অনুসারে আপনার বস আপনার পাসপোর্ট হোল্ড করতে পারেন না৷ তাই এই ব্যাপারে আপনার ডরমিটরিতে যে ফাস্ট টীমের সদস্যরা আছে তাদের কাছে হেল্প চান তারা সহায়তা করবে। এমনকি আপনি এমওএম ও সিঙ্গাপুর পুলিশের সহায়তা চাইতে পারেন তারাও হেল্প করবে।'
+
+      }
+  } else if (payload === 'passport_coming') {
+
+      response = {
+
+        "text": 'আপনি হাইকমিশনের সাথে যোগাযোগ করুন৷ যদি ডরমিটরি থেকে বের হতে না পারেন তবে এই নাম্বারে কল দিয়ে জেনে নিতে পারেন৷ হাইকমিশনের নাম্বার : +6566610280'
+
+      }
+  } else if (payload === 'quarantine_pay') {
+
+      response = {
+
+        "text": 'ভাই আপনি কোয়ারেন্টাইন অর্ডার এর কোন টাকা পাবেন না।তবে আপনার কোম্পানি আপনাকে বেসিক বেতন দিবে।'
+
+      }
+  } else if (payload === 'ip_refund') {
+
+      response = {
+
+        "text": 'সিঙ্গাপুরে লেনদেন করতে হলে অবশ্যই টাকা দেওয়ার রসিদ বুঝে নিবেন। আপনার যদি টাকা প্রদান করার রসিদ থাকে তাহলে এমওএম বা পুলিশের সাথে যোগাযোগ করুন তারা আপনাকে হেল্প করবে। আর ট্রান্সফারের ব্যাপারে অবশ্যই সিঙ্গাপুর সরকার কর্তৃক অনুমতিপ্রাপ্ত এজেন্সিগুলো বাছাই করে নিবেন। সরকার কর্তৃক অনুমতিপ্রাপ্ত নয় এমন এজেন্সি বা ব্যক্তির সাথে লেনদেন করা আইনত দণ্ডনীয় অপরাধ।'
+
+      }
+  } else if (payload === 'no_salary') {
+
+      response = {
+
+        "text": 'আপনি নিচের হেল্ললাইনে যোগাযোগ করুন তারা আপনাকে হেল্প করবে। Call: 88312560 WhatsApp: https://wa.me/6588312560 Call: 90895538 WhatsApp: https://wa.me/6590895538 Call: 86477244 WhatsApp: https://wa.me/6586477244 Call: 98830947 WhatsApp: https://wa.me/6598830947'
+
+      }
+  } else if (payload === 'leave_dormitory') {
+
+      response = {
+
+        "text": 'হ্যাঁ জরুরি কাজে যেতে পারবেন৷ তবে এক্ষেত্রে আপনার কোম্পানি বা ডরমিটরির অপারেটরকে জানান৷ তারা এমওএম এ আবেদন করে আপনার বাহিরে যাবার ব্যাপারে প্রয়োজনীয় সহায়তা করবে।'
 
       }
   }
