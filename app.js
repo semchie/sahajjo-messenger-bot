@@ -115,30 +115,57 @@ function handleMessage(sender_psid, received_message) {
         "type": "template",
         "payload": {
           "template_type": "generic",
-          "elements": [{
-            "title": "Choose a category",
-            "subtitle": "Tap a button to answer.",
+          "elements": [
+          {
+            "title": "শ্রমিকের অধিকার",
+            "subtitle": "Worker Rights",
             "buttons": [
               {
-                //Worker Mobility
+                
                 "type": "postback",
-                "title": "কর্মী গতিশীলতা",
+                "title": "See More",
+                "payload": "worker_rights",
+              },
+            ],
+          },
+          {
+            "title": "কর্মী গতিশীলতা",
+            "subtitle": "Worker Mobility",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "See More",
                 "payload": "worker_mobility",
               },
+            ],
+          },
+          {
+            "title": "বেতন",
+            "subtitle": "Salary",
+            "buttons": [
               {
-                //Salary
+                
                 "type": "postback",
-                "title": "বেতন",
+                "title": "See More",
                 "payload": "salary",
               },
-              {
-                //Worker Rights
-                "type": "postback",
-                "title": "শ্রমিকের অধিকার",
-                "payload": "worker_rights",
-              }
             ],
-          }]
+          },
+          {
+            "title": "জীবন যাপনের অবস্থা",
+            "subtitle": "Living Conditions",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "See More",
+                "payload": "salary",
+              },
+            ],
+          }
+          
+          ]
         }
       }
     }
@@ -165,29 +192,54 @@ function handlePostback(sender_psid, received_postback) {
           "template_type": "generic",
           "elements": [
           {
-            "title": "Choose a category",
-            "subtitle": "Tap a button to answer.",
+            "title": "শ্রমিকের অধিকার",
+            "subtitle": "Worker Rights",
             "buttons": [
               {
-                //Worker Mobility
+                
                 "type": "postback",
-                "title": "কর্মী গতিশীলতা",
+                "title": "See More",
+                "payload": "worker_rights",
+              },
+            ],
+          },
+          {
+            "title": "কর্মী গতিশীলতা",
+            "subtitle": "Worker Mobility",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "See More",
                 "payload": "worker_mobility",
               },
             ],
           },
           {
-            "title": "Choose a category",
-            "subtitle": "Tap a button to answer.",
+            "title": "বেতন",
+            "subtitle": "Salary",
             "buttons": [
               {
-                //Worker Mobility
+                
                 "type": "postback",
-                "title": "কর্মী গতিশীলতা",
-                "payload": "worker_mobility",
+                "title": "See More",
+                "payload": "salary",
+              },
+            ],
+          },
+          {
+            "title": "জীবন যাপনের অবস্থা",
+            "subtitle": "Living Conditions",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "See More",
+                "payload": "salary",
               },
             ],
           }
+          
           ]
         }
       }
