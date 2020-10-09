@@ -213,7 +213,7 @@ function handlePostback(sender_psid, received_postback) {
             "buttons": [
               {
                 "type": "postback",
-                "title": "প্রশ্ন ১৩ : ভাই আমি তিনমাস যাবত পাচ্ছি না এখন কিভাবে বেতন পেতে পারি?",
+                "title": "আমি তিনমাস যাবত পাচ্ছি না এখন কিভাবে বেতন পেতে পারি?",
                 "payload": "not_received_salary",
               },
               {
