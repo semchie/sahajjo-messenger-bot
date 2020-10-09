@@ -137,12 +137,12 @@ function handleMessage(sender_psid, received_message) {
                 "title": "শ্রমিকের অধিকার",
                 "payload": "worker_rights",
               }
-              {
+              /*{
                 //Legal Matters
                 "type": "postback",
                 "title": "আইনগত বাপের",
                 "payload": "legal_matters",
-              }
+              }*/
             ],
           }]
         }
@@ -191,12 +191,12 @@ function handlePostback(sender_psid, received_postback) {
                 "title": "শ্রমিকের অধিকার",
                 "payload": "worker_rights",
               }
-              {
+              /*{
                 //Legal Matters
                 "type": "postback",
                 "title": "আইনগত বাপের",
                 "payload": "legal_matters",
-              }
+              }*/
             ],
           }]
         }
