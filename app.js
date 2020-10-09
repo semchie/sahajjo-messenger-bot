@@ -175,7 +175,7 @@ function handlePostback(sender_psid, received_postback) {
                 "payload": "worker_mobility",
               },
             ],
-          }
+          },
           {
             "title": "Choose a category",
             "subtitle": "Tap a button to answer.",
