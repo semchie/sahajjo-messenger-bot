@@ -120,10 +120,10 @@ function handleMessage(sender_psid, received_message) {
             "subtitle": "Tap a button to answer.",
             "buttons": [
               {
-                //Remittance
+                //Worker Mobility
                 "type": "postback",
-                "title": "রেমিট্যান্স",
-                "payload": "remittance",
+                "title": "কর্মী গতিশীলতা",
+                "payload": "worker_mobility",
               },
               {
                 //Salary
@@ -136,6 +136,12 @@ function handleMessage(sender_psid, received_message) {
                 "type": "postback",
                 "title": "শ্রমিকের অধিকার",
                 "payload": "worker_rights",
+              }
+              {
+                //Legal Matters
+                "type": "postback",
+                "title": "আইনগত বাপের",
+                "payload": "legal_matters",
               }
             ],
           }]
@@ -168,10 +174,10 @@ function handlePostback(sender_psid, received_postback) {
             "subtitle": "Tap a button to answer.",
             "buttons": [
               {
-                //Remittance
+                //Worker Mobility
                 "type": "postback",
-                "title": "রেমিট্যান্স",
-                "payload": "remittance",
+                "title": "কর্মী গতিশীলতা",
+                "payload": "worker_mobility",
               },
               {
                 //Salary
@@ -185,18 +191,48 @@ function handlePostback(sender_psid, received_postback) {
                 "title": "শ্রমিকের অধিকার",
                 "payload": "worker_rights",
               }
+              {
+                //Legal Matters
+                "type": "postback",
+                "title": "আইনগত বাপের",
+                "payload": "legal_matters",
+              }
             ],
           }]
         }
       }
     }
 
-    //If the user selects the remittance button, here is the remittance information
+    //If the user selects the Worker Mobility button, here is the Worker Mobility Information information
 
-  } else if (payload === 'remittance') {
+  } else if (payload === 'worker_mobility') {
     
     response = { 
-      "text": "No remittance content yet! Go to https://www.shahajjo.me/ for more information" 
+      "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [{
+            "title": "Rejected passport transfer",
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "Answer",
+                "payload": "rejected_passport_transfer",
+              },
+            ],
+            "title": "Permit Expire",
+            "buttons": [
+              {
+                "type": "postback",
+                "title": "Answer",
+                "payload": "permit_expired",
+              },
+            ],
+          }]
+        }
+      }
+    }
     }
 
     //If the user selects the salary button, here is the salary information
