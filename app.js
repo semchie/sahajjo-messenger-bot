@@ -160,7 +160,7 @@ function handleMessage(sender_psid, received_message) {
                 
                 "type": "postback",
                 "title": "See More",
-                "payload": "salary",
+                "payload": "living_conditions",
               },
             ],
           }
@@ -235,7 +235,7 @@ function handlePostback(sender_psid, received_postback) {
                 
                 "type": "postback",
                 "title": "See More",
-                "payload": "salary",
+                "payload": "living_conditions",
               },
             ],
           }
@@ -275,7 +275,7 @@ function handlePostback(sender_psid, received_postback) {
                 
                 "type": "postback",
                 "title": "See More",
-                "payload": "passport_expired",
+                "payload": "permit_expired",
               },
             ],
           },
@@ -426,7 +426,50 @@ function handlePostback(sender_psid, received_postback) {
 
       }
 
+  } else if (payload === 'rejected_passport_transfer') {
+
+      response = {
+
+        "text": 'কেন রিজেক্ট আসে তা কিন্তু এমওএম সাথে ইমেইল করে রিজেক্টের কারন জানিয়ে দেয়৷ আপনার আইপি যে এপ্লাই করেছে তাকে জিজ্ঞেস করুন এমওএম কি কারন উল্লেখ করেছে। তাছাড়া আপনি নিজেও এমওএম এর সাথে যোগাযোগ করে জেনে নিতে পারেন৷'
+
+      }
+  } else if (payload === 'permit_expired') {
+
+      response = {
+
+        "text": 'এখন আপনার করনীয় কিছু নেই। কোম্পানি এমওএম এর কাছে এর কারন জেনে আপনাকে জানাবে। আর কোম্পানি না জানালে আপনি এমওএম এর সাথে যোগাযোগ করে জেনে নিতে পারেন।'
+
+      }
+  } else if (payload === 'travel_to_country') {
+
+      response = {
+
+        "text": 'এখন দেশে যেতে চাইলে কোম্পানিকে জানান৷ পারমিট ক্যানসেল বা ছুটিতে যাওয়ার ব্যাপারটি কোম্পানির উপর নির্ভর করছে। আর হ্যাঁ দেশে গেলে সবকিছু স্বাভাবিক হলে আবার আসা যাবে৷'
+
+      }
+  } else if (payload === 'holiday_to_country') {
+
+      response = {
+
+        "text": 'এটা নির্ভর করে কোম্পানির উপর। আপনি আপনার কোম্পানির সাথে যোগাযোগ করুন।'
+
+      }
+  } else if (payload === 'how_to_transfer') {
+
+      response = {
+
+        "text": 'আপনার কোম্পানি থেকে ট্রান্সফার লেটার নিয়ে ট্রান্সফার হতে পারবেন। অথবা আপনার পারমিট এর মেয়াদ যদি ৪০ দিনের কম বা ২০ দিনের বেশী থাকে তবে আপনি ট্রান্সফার লেটার ছাড়াই ট্রান্সফার হতে পারবেন৷'
+
+      }
+  } else if (payload === 'go_to_country_now') {
+
+      response = {
+
+        "text": ' আপনার দেশে যাওয়ার ব্যাপারটা কোম্পানির উপর নির্ভর করছে। আপনি কোম্পানিকে জানান৷ কোম্পানি এমওএম এ আপনার দেশে যাওয়ার জন্য আবেদন করবে । এমওএম সবকিছু চেক করে আপনার কোম্পানিকে প্রয়োজনীয় পদক্ষেপ গ্রহণ করার জন্য জানাবে। তবেই আপনি দেশে যেতে পারবেন। আর সবচেয়ে গুরুত্বপূর্ণ কথা হলো, এমওএন এ আবেদন করা মানেই দ্রুত দেশে যেতে পারবেন  তা নয়।এখন অনেকেই দেশে যাবার জন্য আবেদন করেছে তাই আপনাকে অপেক্ষা করতে হবে। সিরিয়াল অনুযায়ী আপনার সময় হলেই আপনি দেশে যেতে পারবেন৷'
+
+      }
   }
+
   // Send the message to acknowledge the postback
   callSendAPI(sender_psid, response);
 }
