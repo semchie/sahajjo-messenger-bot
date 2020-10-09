@@ -618,3 +618,45 @@ function callSendAPI(sender_psid, response) {
     }
   }); 
 }
+
+function persistentMenu(sender_psid, response) {
+  // Construct the message body
+  let menu_setting = {
+    
+    "psid": sender_psid,
+
+    "persistent_menu": [
+        {
+            "locale": "default",
+            "composer_input_disabled": false,
+            "call_to_actions": [
+                {
+                    "type": "web_url",
+                    "title": "Shahajjo.me",
+                    "url": "https://www.shahajjo.me/",
+                    "webview_height_ratio": "full"
+                },
+                {
+                    "type": "web_url",
+                    "title": "MOM",
+                    "url": "https://www.mom.gov.sg/",
+                    "webview_height_ratio": "full"
+                }
+            ]
+        }
+    ]
+}
+  // Send the HTTP request to the Messenger Platform
+  request({
+    "uri": "https://graph.facebook.com/v8.0/me/custom_user_settings",
+    "qs": { "access_token": PAGE_ACCESS_TOKEN },
+    "method": "POST",
+    "json": menu_setting
+  }, (err, res, body) => {
+    if (!err) {
+      console.log('menu set!')
+    } else {
+      console.error("Unable to set menu" + err);
+    }
+  }); 
+}
