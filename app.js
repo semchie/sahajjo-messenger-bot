@@ -260,8 +260,8 @@ function handlePostback(sender_psid, received_postback) {
           "template_type": "generic",
           "elements": [
           {
-            "title": "rejected passport transfer",
-            "subtitle": "rejected passport transfer",
+            "title": "রিজেক্ট পাসপোর্ট ট্রান্সফার",
+            "subtitle": "Rejected Passport Transfer",
             "buttons": [
               {
                 
@@ -272,8 +272,8 @@ function handlePostback(sender_psid, received_postback) {
             ],
           },
           {
-            "title": "permit expired",
-            "subtitle": "permit expired",
+            "title": "পারমিট শেষ হইছে",
+            "subtitle": "Permit Expired",
             "buttons": [
               {
                 
@@ -284,8 +284,8 @@ function handlePostback(sender_psid, received_postback) {
             ],
           },
           {
-            "title": "travel to country",
-            "subtitle": "travel to country",
+            "title": "দেশে যাই, দেশে গেলে, দেশে যাব ",
+            "subtitle": "Travel to Country",
             "buttons": [
               {
                 
@@ -296,8 +296,8 @@ function handlePostback(sender_psid, received_postback) {
             ],
           },
           {
-            "title": "holiday to country",
-            "subtitle": "holiday to country",
+            "title": "ছুটিতে দেশে যাব, ছুটি দেশে",
+            "subtitle": "Holiday to Country",
             "buttons": [
               {
                 
@@ -308,8 +308,8 @@ function handlePostback(sender_psid, received_postback) {
             ],
           },
           {
-            "title": "How to transfer",
-            "subtitle": "how to transfer",
+            "title": "ট্রান্সফার হব, ট্রান্সফার হলে, ট্রান্সফার হইলে ",
+            "subtitle": "How to Transfer",
             "buttons": [
               {
                 
@@ -320,7 +320,7 @@ function handlePostback(sender_psid, received_postback) {
             ],
           },
           {
-            "title": "Go to country now",
+            "title": "দেশে যেতে পারবো, দেশে যেতে চাইলে, দেশে যেতে পারব",
             "subtitle": "Go to country now",
             "buttons": [
               {
@@ -348,7 +348,7 @@ function handlePostback(sender_psid, received_postback) {
           "template_type": "generic",
           "elements": [
           {
-            "title": "Need passport back",
+            "title": "পাসপোর্ট দিচ্ছে না, দেয় না",
             "subtitle": "Need passport back",
             "buttons": [
               {
@@ -360,7 +360,7 @@ function handlePostback(sender_psid, received_postback) {
             ],
           },
           {
-            "title": "Passport coming?",
+            "title": "পাসপোর্ট আসছে?",
             "subtitle": "Is my passport coming?",
             "buttons": [
               {
@@ -386,8 +386,8 @@ function handlePostback(sender_psid, received_postback) {
           "template_type": "generic",
           "elements": [
           {
-            "title": "quarantine pay",
-            "subtitle": "quarantine pay",
+            "title": "কোয়ারেন্টাইন টাকা, কোয়ারেন্টাইন অর্ডার টাকা",
+            "subtitle": "Quarantine Pay",
             "buttons": [
               {
                 
@@ -398,7 +398,7 @@ function handlePostback(sender_psid, received_postback) {
             ],
           },
           {
-            "title": "IP refund",
+            "title": "আইপি টাকা ফেরত",
             "subtitle": "IP refund",
             "buttons": [
               {
@@ -410,8 +410,8 @@ function handlePostback(sender_psid, received_postback) {
             ],
           },
           {
-            "title": "no salary",
-            "subtitle": "no salary",
+            "title": "বেতন পাচ্ছি না, বেতন পাই না, দেয় না   ",
+            "subtitle": "No Salary",
             "buttons": [
               {
                 
@@ -435,8 +435,8 @@ function handlePostback(sender_psid, received_postback) {
           "template_type": "generic",
           "elements": [
           {
-            "title": "leave dormitory",
-            "subtitle": "leave dormitory",
+            "title": "ডরমিটরি বাহিরে, বাইরে ",
+            "subtitle": "Leave Dormitory",
             "buttons": [
               {
                 
@@ -636,7 +636,7 @@ function persistentMenu(sender_psid, response) {
             "call_to_actions": [
                 {
                     "type": "web_url",
-                    "title": "Shahajjo.me",
+                    "title": "Shahajjo.me Website",
                     "url": "https://www.shahajjo.me/",
                     "webview_height_ratio": "full"
                 },
