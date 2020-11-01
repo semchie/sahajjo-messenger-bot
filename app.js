@@ -127,7 +127,7 @@ function handleMessage(sender_psid, received_message) {
               {
                 
                 "type": "postback",
-                "title": "See More",
+                "title": "আরও জানুন",
                 "payload": "worker_rights",
               },
             ],
@@ -139,7 +139,7 @@ function handleMessage(sender_psid, received_message) {
               {
                 
                 "type": "postback",
-                "title": "See More",
+                "title": "আরও জানুন",
                 "payload": "worker_mobility",
               },
             ],
@@ -151,7 +151,7 @@ function handleMessage(sender_psid, received_message) {
               {
                 
                 "type": "postback",
-                "title": "See More",
+                "title": "আরও জানুন",
                 "payload": "salary",
               },
             ],
@@ -163,7 +163,7 @@ function handleMessage(sender_psid, received_message) {
               {
                 
                 "type": "postback",
-                "title": "See More",
+                "title": "আরও জানুন",
                 "payload": "living_conditions",
               },
             ],
@@ -202,7 +202,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 
                 "type": "postback",
-                "title": "See More",
+                "title": "আরও জানুন",
                 "payload": "worker_rights",
               },
             ],
@@ -214,7 +214,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 
                 "type": "postback",
-                "title": "See More",
+                "title": "আরও জানুন",
                 "payload": "worker_mobility",
               },
             ],
@@ -226,7 +226,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 
                 "type": "postback",
-                "title": "See More",
+                "title": "আরও জানুন",
                 "payload": "salary",
               },
             ],
@@ -238,7 +238,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 
                 "type": "postback",
-                "title": "See More",
+                "title": "আরও জানুন",
                 "payload": "living_conditions",
               },
             ],
@@ -266,7 +266,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 
                 "type": "postback",
-                "title": "See More",
+                "title": "আরও জানুন",
                 "payload": "rejected_passport_transfer",
               },
             ],
@@ -278,7 +278,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 
                 "type": "postback",
-                "title": "See More",
+                "title": "আরও জানুন",
                 "payload": "permit_expired",
               },
             ],
@@ -290,7 +290,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 
                 "type": "postback",
-                "title": "See More",
+                "title": "আরও জানুন",
                 "payload": "travel_to_country",
               },
             ],
@@ -302,7 +302,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 
                 "type": "postback",
-                "title": "See More",
+                "title": "আরও জানুন",
                 "payload": "holiday_to_country",
               },
             ],
@@ -314,7 +314,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 
                 "type": "postback",
-                "title": "See More",
+                "title": "আরও জানুন",
                 "payload": "how_to_transfer",
               },
             ],
@@ -326,7 +326,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 
                 "type": "postback",
-                "title": "See More",
+                "title": "আরও জানুন",
                 "payload": "go_to_country_now",
               },
             ],
@@ -354,7 +354,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 
                 "type": "postback",
-                "title": "See More",
+                "title": "আরও জানুন",
                 "payload": "need_passport_back",
               },
             ],
@@ -366,7 +366,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 
                 "type": "postback",
-                "title": "See More",
+                "title": "আরও জানুন",
                 "payload": "passport_coming",
               },
             ],
@@ -392,7 +392,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 
                 "type": "postback",
-                "title": "See More",
+                "title": "আরও জানুন",
                 "payload": "quarantine_pay",
               },
             ],
@@ -404,7 +404,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 
                 "type": "postback",
-                "title": "See More",
+                "title": "আরও জানুন",
                 "payload": "ip_refund",
               },
             ],
@@ -416,7 +416,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 
                 "type": "postback",
-                "title": "See More",
+                "title": "আরও জানুন",
                 "payload": "no_salary",
               },
             ],
@@ -441,7 +441,7 @@ function handlePostback(sender_psid, received_postback) {
               {
                 
                 "type": "postback",
-                "title": "See More",
+                "title": "আরও জানুন",
                 "payload": "leave_dormitory",
               },
             ],
