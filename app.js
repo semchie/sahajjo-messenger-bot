@@ -145,6 +145,19 @@ function handleMessage(sender_psid, received_message) {
             ],
           },
           {
+            "title": "কভিড -১৯ বিষয়",
+            "subtitle": "COVID-19 Matters",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "আরও জানুন",
+                "payload": "covid_19_matters",
+              },
+            ],
+          },
+
+          {
             "title": "বেতন",
             "subtitle": "Salary",
             "buttons": [
@@ -216,6 +229,19 @@ function handlePostback(sender_psid, received_postback) {
                 "type": "postback",
                 "title": "আরও জানুন",
                 "payload": "worker_mobility",
+              },
+            ],
+          },
+
+          {
+            "title": "কভিড -১৯ বিষয়",
+            "subtitle": "COVID-19 Matters",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "আরও জানুন",
+                "payload": "covid_19_matters",
               },
             ],
           },
@@ -429,6 +455,33 @@ function handlePostback(sender_psid, received_postback) {
     }
     //If the user selects the salary button, here is the salary information
 
+  } else if (payload === 'covid_19_matters') {
+    
+    response = {
+        "attachment": {
+        "type": "template",
+        "payload": {
+          "template_type": "generic",
+          "elements": [
+          {
+            "title": "কবে এই কোয়ারেন্টাইন ২২০০ থাকার নিয়ম বাতিল করা হবে?",
+            "subtitle": "When will this quarantine 2200 rule be abolished?",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "আরও জানুন",
+                "payload": "quarantine_2200_rule",
+              },
+            ],
+          },
+          
+          ]
+        }
+      }
+    }
+    //If the user selects the salary button, here is the salary information
+
   } else if (payload === 'salary') {
     
     response = {
@@ -503,6 +556,14 @@ function handlePostback(sender_psid, received_postback) {
         }
       }
     } 
+
+  } else if (payload === 'quarantine_2200_rule') {
+
+      response = {
+
+        "text": 'কবে এই নিয়ম বাতিল করবে জানা নেই৷ তবে করোনা ভাইরাসের পরিস্থিতির সবকিছু নির্ভর করছে৷ আমাদের দেশে যদি করোনাভাইরাস নিয়ন্ত্রণে চলে আসে তখন হয়তো এই নিয়মের ব্যাপারে কিছুটা নমনীয় হবে৷'
+
+      }
 
   } else if (payload === 'can_I_be_transferred_36_days') {
 
