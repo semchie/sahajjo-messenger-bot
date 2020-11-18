@@ -260,6 +260,44 @@ function handlePostback(sender_psid, received_postback) {
           "template_type": "generic",
           "elements": [
           {
+            "title": "এখন কি ছুটিতে যাওয়া যাবে?",
+            "subtitle": "Can I go on holiday now?",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "আরও জানুন",
+                "payload": "go_on_holiday_now",
+              },
+            ],
+          }
+          {
+            "title": "আমি ছুটিতে দেশে এসে আটকে গেছি৷",
+            "subtitle": "I came to the country on holiday and got stuck",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "আরও জানুন",
+                "payload": "stuck_in_country",
+              },
+            ],
+          }
+
+          {
+            "title": "কবে নতুন আইপি হবে?",
+            "subtitle": "When will the new IP be?",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "আরও জানুন",
+                "payload": "when_will_new_IP",
+              },
+            ],
+          }
+
+          {
             "title": "রিজেক্ট পাসপোর্ট ট্রান্সফার",
             "subtitle": "Rejected Passport Transfer",
             "buttons": [
@@ -331,7 +369,30 @@ function handlePostback(sender_psid, received_postback) {
               },
             ],
           }
-          
+          {
+            "title": "এখন কি ছুটিতে যাওয়া যাবে?",
+            "subtitle": "Can I go on holiday now?",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "আরও জানুন",
+                "payload": "go_on_holiday_now",
+              },
+            ],
+          }
+          {
+            "title": "আমি ছুটিতে দেশে এসে আটকে গেছি৷",
+            "subtitle": "I came to the country on holiday and got stuck",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "আরও জানুন",
+                "payload": "stuck_in_country",
+              },
+            ],
+          }          
           ]
         }
       }
@@ -548,7 +609,27 @@ function handlePostback(sender_psid, received_postback) {
 
       response = {
 
-        "text": ' আপনার দেশে যাওয়ার ব্যাপারটা কোম্পানির উপর নির্ভর করছে। আপনি কোম্পানিকে জানান৷ কোম্পানি এমওএম এ আপনার দেশে যাওয়ার জন্য আবেদন করবে । এমওএম সবকিছু চেক করে আপনার কোম্পানিকে প্রয়োজনীয় পদক্ষেপ গ্রহণ করার জন্য জানাবে। তবেই আপনি দেশে যেতে পারবেন। আর সবচেয়ে গুরুত্বপূর্ণ কথা হলো, এমওএন এ আবেদন করা মানেই দ্রুত দেশে যেতে পারবেন  তা নয়।এখন অনেকেই দেশে যাবার জন্য আবেদন করেছে তাই আপনাকে অপেক্ষা করতে হবে। সিরিয়াল অনুযায়ী আপনার সময় হলেই আপনি দেশে যেতে পারবেন৷'
+        "text": 'আপনার দেশে যাওয়ার ব্যাপারটা কোম্পানির উপর নির্ভর করছে। আপনি কোম্পানিকে জানান৷ কোম্পানি এমওএম এ আপনার দেশে যাওয়ার জন্য আবেদন করবে । এমওএম সবকিছু চেক করে আপনার কোম্পানিকে প্রয়োজনীয় পদক্ষেপ গ্রহণ করার জন্য জানাবে। তবেই আপনি দেশে যেতে পারবেন। আর সবচেয়ে গুরুত্বপূর্ণ কথা হলো, এমওএন এ আবেদন করা মানেই দ্রুত দেশে যেতে পারবেন  তা নয়।এখন অনেকেই দেশে যাবার জন্য আবেদন করেছে তাই আপনাকে অপেক্ষা করতে হবে। সিরিয়াল অনুযায়ী আপনার সময় হলেই আপনি দেশে যেতে পারবেন৷'
+
+   } else if (payload === 'go_on_holiday_now') {
+
+      response = {
+
+        "text": 'এই ব্যাপারে আপনার কোম্পানির সাথে যোগাযোগ করলে ভালো হয়।'
+
+      }
+  } else if (payload === 'stuck_in_country') {
+
+      response = {
+
+        "text": 'আপনার এখন কিছুই করনীয় নেই৷ বসকে বলবেন আবার ১৫ দিন পর রি-এন্ট্রির জন্য এপ্লাই করতে৷'
+
+      }
+  } else if (payload === 'when_will_new_IP') {
+
+      response = {
+
+        "text": 'উত্তর : নতুন আইপির ব্যাপারটি এখনো সঠিক বলতে পারছি না৷ আপনাকে বলবো আরো কিছুদিন অপেক্ষা করুন, এখন নতুন আইপির জন্য এপ্লাই করলে রিজেক্ট আসবে। তাই আর কিছুদিন পর ট্রাই করলেই ভালো হয়।'
 
       }
   } else if (payload === 'need_passport_back') {
