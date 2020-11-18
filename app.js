@@ -260,6 +260,19 @@ function handlePostback(sender_psid, received_postback) {
           "template_type": "generic",
           "elements": [
           {
+            "title": "কবে নতুন আইপি হবে?",
+            "subtitle": "When will the new IP be?",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "আরও জানুন",
+                "payload": "when_will_new_IP",
+              },
+            ],
+          },	
+
+          {
             "title": "রিজেক্ট পাসপোর্ট ট্রান্সফার",
             "subtitle": "Rejected Passport Transfer",
             "buttons": [
@@ -506,6 +519,14 @@ function handlePostback(sender_psid, received_postback) {
       response = {
 
         "text": 'https://www.shahajjo.me/post/2'
+
+      }
+
+  } else if (payload === 'when_will_new_IP') {
+
+      response = {
+
+        "text": 'উত্তর : নতুন আইপির ব্যাপারটি এখনো সঠিক বলতে পারছি না৷ আপনাকে বলবো আরো কিছুদিন অপেক্ষা করুন, এখন নতুন আইপির জন্য এপ্লাই করলে রিজেক্ট আসবে। তাই আর কিছুদিন পর ট্রাই করলেই ভালো হয়।'
 
       }
 
