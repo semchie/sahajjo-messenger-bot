@@ -283,6 +283,19 @@ function handlePostback(sender_psid, received_postback) {
                 "payload": "go_on_holiday_now",
               },
             ],
+          },
+
+          {
+            "title": "আমি ছুটিতে দেশে এসে আটকে গেছি৷",
+            "subtitle": "I came to the country on holiday and got stuck",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "আরও জানুন",
+                "payload": "stuck_in_country",
+              },
+            ],
           },	
 
           {
@@ -373,6 +386,19 @@ function handlePostback(sender_psid, received_postback) {
         "payload": {
           "template_type": "generic",
           "elements": [
+          {
+            "title": "আমার কোম্পানি ট্রান্সফার লেটার দিচ্ছে না।",
+            "subtitle": "My company is not issuing transfer letters",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "আরও জানুন",
+                "payload": "can_I_be_transferred_36_days",
+              },
+            ],
+          },
+
           {
             "title": "পাসপোর্ট দিচ্ছে না, দেয় না",
             "subtitle": "Need passport back",
@@ -535,6 +561,14 @@ function handlePostback(sender_psid, received_postback) {
 
       }
 
+  } else if (payload === 'can_I_be_transferred_36_days') {
+
+      response = {
+
+        "text": 'উত্তর : হ্যাঁ পারবেন৷ আপনার নতুন বসকে বলবেন এই মেইলে ইমেইল করতে ;mom_wpd@mom.gov.sg'
+
+      }
+
   } else if (payload === 'when_will_new_IP') {
 
       response = {
@@ -548,6 +582,14 @@ function handlePostback(sender_psid, received_postback) {
       response = {
 
         "text": 'এই ব্যাপারে আপনার কোম্পানির সাথে যোগাযোগ করলে ভালো হয়।'
+
+      }
+
+  } else if (payload === 'stuck_in_country') {
+
+      response = {
+
+        "text": 'আপনার এখন কিছুই করনীয় নেই৷ বসকে বলবেন আবার ১৫ দিন পর রি-এন্ট্রির জন্য এপ্লাই করতে৷'
 
       }
 
