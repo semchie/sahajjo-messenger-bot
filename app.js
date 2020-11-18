@@ -504,63 +504,6 @@ function handlePostback(sender_psid, received_postback) {
       }
     } 
 
-  } else if (payload === 'worker_rights') {
-
-      response = {
-        "attachment": {
-        "type": "template",
-        "payload": {
-          "template_type": "generic",
-          "elements": [{
-            "title": "Choose a topic on worker rights",
-            //"subtitle": "Tap a button to answer.",
-            //"image_url": "https://sahajjo-test.herokuapp.com/images/profile_photo.jpg",
-            "buttons": [
-              {
-                "type": "postback",
-                "title": "Employment Rights",
-                "payload": "employment_rights",
-              },
-              {
-                "type": "postback",
-                "title": "Passport is expiring",
-                "payload": "passport_expiring",
-              },
-              {
-                "type": "postback",
-                "title": "Received a new permit",
-                "payload": "new_permit",
-              }
-            ],
-          }]
-        }
-      }
-    }
-    //If select not_received_salary button
-  } else if (payload === 'employment_rights') {
-
-      response = {
-
-        "text": 'Learn More: https://www.shahajjo.me/post/6'
-
-      }
-
-  } else if (payload === 'passport_expiring') {
-
-      response = {
-
-        "text": 'Learn More: https://www.shahajjo.me/post/3'
-
-      }
-
-  } else if (payload === 'new_permit') {
-
-      response = {
-
-        "text": 'https://www.shahajjo.me/post/2'
-
-      }
-
   } else if (payload === 'can_I_be_transferred_36_days') {
 
       response = {
