@@ -270,6 +270,19 @@ function handlePostback(sender_psid, received_postback) {
                 "payload": "when_will_new_IP",
               },
             ],
+          },
+
+          {
+            "title": "এখন কি ছুটিতে যাওয়া যাবে?",
+            "subtitle": "Can I go on holiday now?",
+            "buttons": [
+              {
+                
+                "type": "postback",
+                "title": "আরও জানুন",
+                "payload": "go_on_holiday_now",
+              },
+            ],
           },	
 
           {
@@ -527,6 +540,14 @@ function handlePostback(sender_psid, received_postback) {
       response = {
 
         "text": 'উত্তর : নতুন আইপির ব্যাপারটি এখনো সঠিক বলতে পারছি না৷ আপনাকে বলবো আরো কিছুদিন অপেক্ষা করুন, এখন নতুন আইপির জন্য এপ্লাই করলে রিজেক্ট আসবে। তাই আর কিছুদিন পর ট্রাই করলেই ভালো হয়।'
+
+      }
+
+  } else if (payload === 'go_on_holiday_now') {
+
+      response = {
+
+        "text": 'এই ব্যাপারে আপনার কোম্পানির সাথে যোগাযোগ করলে ভালো হয়।'
 
       }
 
